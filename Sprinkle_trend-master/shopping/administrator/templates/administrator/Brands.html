@@ -1,0 +1,33 @@
+{% extends 'administrator/adminTemplate.html' %}
+
+
+{% block title %}
+Brands
+{% endblock %}
+
+{% block content %}
+<td>
+
+<h1>BRANDS</h1>
+<hr>
+<div style="padding-left: 10px;font-family: Calibri;font-size: 25px;font-weight: 100;margin-left: auto;margin-right: auto;color: grey">
+<a href="/admin/brand/add/">Add New Brand</a>
+
+<table border="1">
+	<tr>
+		<td>Id</td>
+		<td>Name</td>
+		<td>Logo</td>
+		<td>Command</td>
+	</tr>
+	{% for b in brand %}
+	<tr>
+		<td>{{b.id}}</td>
+		<td>{{b.name}}</td>
+		<td>{{b.logo}}</td>
+		<td><a href="/admin/brand/delete/{{ b.id }}/">Delete</a> | <a href="/admin/brand/update/{{ b.id }}/">Update</a></td>
+	</tr>
+	{% endfor %}
+</table>
+</td>
+{% endblock %}

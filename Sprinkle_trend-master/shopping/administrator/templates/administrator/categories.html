@@ -1,0 +1,33 @@
+{% extends 'administrator/adminTemplate.html' %}
+
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<td>
+
+<h1>Categories</h1>
+<div style="padding-left: 10px;font-family: Calibri;font-size: 25px;font-weight: 100;margin-left: auto;margin-right: auto;color: grey">
+<a href="/admin/category/add/">Add New Category</a>
+
+<table border="1">
+	<tr>
+		<td>Id</td>
+		<td>Parent Id</td>
+		<td>Name</td>
+		<td>Description</td>
+		<td>Command</td>
+	</tr>
+	{% for category in categories  %}
+	<tr>
+		<td>{{ category.id }}</td>
+		<td>{{ category.parentid }}</td>
+		<td>{{ category.name }}</td>
+		<td>{{ category.description }}</td>
+		<td><a href="/admin/category/delete/{{ category.id }}/">Delete</a> | <a href="/admin/category/update/{{ category.id }}/">Update</a></td>
+	</tr>
+	{% endfor %}
+</table>
+</td>
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+</head>
+<body>
+<form method="post">
+	{%csrf_token%}
+		{{form}}
+		<input type="submit">
+	<!--le border="1">
+		<tr>
+			<td>Email</td>
+			<td>Password</td>
+			<td>type</td>
+			<td>Isactive</td>
+		</tr>
+	-->
+		<!--for every record in data set we want to run this code-->
+		<!--{% for user in users %}		for loop format-->
+		<!--<tr>
+			<td>{{user.email}}</td>
+			<td>{{user.password}}</td>
+			<td>{{user.type}}</td>
+			<td>{{user.isactive}}</td>
+		</tr>
+		{% endfor %}		end of for loop-->
+	
+
+</form>
+
+</body>
+</html>

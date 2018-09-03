@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Home</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			border: 0px;
+		}
+		table,tr,td{
+			border: 1px solid grey;
+			border-collapse: collapse;
+		}
+		/* unvisited link */
+		a:link {
+    		color: grey;
+		}
+
+		/* visited link */
+		a:visited {
+    		color: grey;
+		}
+
+		/* mouse over link */
+		a:hover {
+		    color: hotpink;
+		}
+
+		/* selected link */
+		a:active {
+		    color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div style="height: 20%;width: 100%;background-color: grey;">
+		<h1 align="left" style="padding-left: 10px;font-family: Calibri;font-size: 25px;font-weight: 100;margin-left: auto;margin-right: auto;color: white">SHOPPING</h1>
+	</div>
+	<hr>
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 20%;background-color: lightgrey;">
+				<div align='center' style="height:100%;font-family: Calibri;font-size: 25px;font-weight: 100;color: grey;width: 100%">
+					<table style="width: 100%">
+							<tr><a href="/admin/categories/">Categories</a></tr><br>
+							<tr><a href="/admin/products/">Products</a></tr><br>
+							<tr><a href="/admin/brands/">Brands</a></tr><br>
+					</table>
+			</td>
+	
+	{% block content %}
+	{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% extends 'administrator/adminTemplate.html' %}
+
+
+{% block title %}
+EasyKart
+{% endblock %}
+{% block content %}
+<td>
+	<div style="padding-left: 10px;font-family: Calibri;font-size: 25px;font-weight: 100;margin-left: auto;margin-right: auto;color: black">
+		<h1>Add New brand</h1>
+		<hr>
+		<form method="post" >
+		{% csrf_token %}
+		{{ form.as_p }}
+		<br><br>
+		<hr>
+		<input type="submit" value="Add Brand">
+		<br><br>
+		</form>
+	</div>
+</td>
+{% endblock %}

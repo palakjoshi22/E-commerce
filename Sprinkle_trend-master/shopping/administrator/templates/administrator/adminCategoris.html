@@ -1,0 +1,40 @@
+{% extends 'administrator/adminTemplate.html' %}
+
+{% block content %}
+	
+			<td style="width:80%">
+				<div style="width: 100%;font-family: Calibri;font-size: 25px;font-weight: 100;color: grey;">
+					<h1 align="left" style="padding-left: 10px;font-family: Calibri;font-size: 35;font-weight: 100;margin-left: auto;margin-right: auto;color: grey">DASHBOARD</h1>
+					<hr>
+					<table style="border-top:3px solid grey;width: 100%">
+						<tr>
+							<td style="background-color: lightgrey">
+								<a href="" style="padding-left: 10px;padding-top: 1px;padding-bottom: 1px">Add New Products</a>
+							</td>
+						</tr>
+						<tr>
+							<table style="width: 100%">
+								<tr>
+									<td>id</td>
+									<td>Name</td>
+									<td>Command</td>
+								</tr>
+								{% for d in data %}
+								<tr>
+									<td>{{d.id}}</td>
+							
+								
+									<td>{{d.name}}</td>
+								
+									<td><a href="">d</a>|<a href="">a</a>|<a href="">I</a></td>
+								</tr>
+								{% endfor %}
+
+							</table>
+						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+	</table>
+{% endblock %}

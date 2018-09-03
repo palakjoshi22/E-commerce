@@ -1,0 +1,40 @@
+{% extends 'administrator/adminTemplate.html' %}
+
+
+{% block title %}
+PRODUCTS
+{% endblock %}
+
+{% block content %}
+<td>
+
+<h1>Products</h1>
+<div style="padding-left: 10px;font-family: Calibri;font-size: 25px;font-weight: 100;margin-left: auto;margin-right: auto;color: grey">
+<a href="/admin/product/add/">Add New product</a>
+
+<table border="1">
+	<tr>
+		<td>Id</td>
+		<td>Name</td>
+		<td>price</td>
+		<td>stock</td>
+		<td>brand_id</td>
+		<td>category_id</td>
+		<td>seller_id</td>
+		<td>commands</td>
+	</tr>
+	{% for p in product  %}
+	<tr>
+		<td>{{p.id}}</td>
+		<td>{{p.name}}</td>
+		<td>{{p.price}}</td>
+		<td>{{p.stock}}</td>
+		<td>{{p.brandid_id}}</td>
+		<td>{{p.categoryid_id}}</td>
+		<td>{{p.sellerid_id}}</td>
+		<td><a href="/admin/product/delete/{{ p.id }}/">Delete</a> | <a href="/admin/product/update/{{ p.id }}/">Update</a></td>
+	</tr>
+	{% endfor %}
+</table>
+</td>
+{% endblock %}
